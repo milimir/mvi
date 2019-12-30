@@ -25,7 +25,7 @@ def update_animation(xd, yd):
         fitness = gaf.fitness_function(xd, yd)
         print(f"Iteracija: {iii}")
         for x, y, x_ys, fit in zip(xd, yd, x_y_enc, fitness):
-            print(f"\t x:{x}\t y:{y}\t encoded:{np.flip(x_ys)}\t fitness:{fit}")
+            print(f"\t\t x:{x}\t\t y:{y}\t\t encoded:{np.flip(x_ys)}\t\t fitness:{fit}\t\t")
         x_y_fitness = [(x, fit) for x, fit in zip(x_y_enc, fitness)]
         selection = gaf.tournament_selection(x_y_fitness, 2, 6)
         new_gen = []
@@ -43,7 +43,7 @@ def update_animation(xd, yd):
         xd, yd = gaf.decode(x_y_enc, -3, 3, -3, 3, 10**-3)
         zd = F.function(xd, yd)
         s.mlab_source.set(x=xd, y=yd, z=zd)
-
+        
         yield
 
 

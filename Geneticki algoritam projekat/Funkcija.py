@@ -1,6 +1,6 @@
 import math as m
 import numpy as np
-def function(x, y):
+def function(x:np.ndarray, y:np.ndarray)-> np.ndarray:
     """x: niz koordinata na x osi
        y: niz koordinata po y osi
        vraca niz koordinata po z osi
